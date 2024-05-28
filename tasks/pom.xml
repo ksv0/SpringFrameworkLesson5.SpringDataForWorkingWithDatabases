@@ -9,10 +9,10 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>ru.gb.ksv</groupId>
-	<artifactId>SpringFrameworkLesson5SpringDataForWorkingWithDatabases</artifactId>
+	<artifactId>tasks</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>tasks</name>
-	<description>SpringFrameworkLesson5.SpringDataForWorkingWithDatabases</description>
+	<description>tasks</description>
 	<properties>
 		<java.version>22</java.version>
 		<spring-cloud.version>2023.0.1</spring-cloud.version>
@@ -65,6 +65,11 @@
 			<groupId>io.projectreactor</groupId>
 			<artifactId>reactor-test</artifactId>
 			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>io.micrometer</groupId>
+			<artifactId>micrometer-registry-prometheus</artifactId>
+			<scope>runtime</scope>
 		</dependency>
 	</dependencies>
 
