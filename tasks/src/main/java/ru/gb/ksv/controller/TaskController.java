@@ -44,7 +44,7 @@ public class TaskController {
 
     @GetMapping("/some-task")
     public Task createSomeTask(){
-        return taskService.addTask(new Task( "description",TaskStatus.NOT_STARTED));
+        return taskService.addTask(new Task( "description",TaskStatus.OPEN));
     }
 
     @ExceptionHandler(TaskNotFoundException.class)

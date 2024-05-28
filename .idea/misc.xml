@@ -12,6 +12,7 @@
         <option value="$PROJECT_DIR$/eureka server/pom.xml" />
         <option value="$PROJECT_DIR$/APIGateway/pom.xml" />
         <option value="$PROJECT_DIR$/tasks/pom.xml" />
+        <option value="$PROJECT_DIR$/API_gateway/pom.xml" />
       </list>
     </option>
   </component>
