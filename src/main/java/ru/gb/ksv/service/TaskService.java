@@ -2,6 +2,7 @@ package ru.gb.ksv.service;
 
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
+import ru.gb.ksv.aspect.annotation.TrackUserAction;
 import ru.gb.ksv.exception.TaskNotFoundException;
 import ru.gb.ksv.model.Task;
 import ru.gb.ksv.model.TaskStatus;
@@ -15,16 +16,19 @@ public class TaskService implements ITaskService {
     private final ITaskRepository taskRepository;
 
     @Override
+    @TrackUserAction
     public Task addTask(Task task) {
         return taskRepository.save(task);
     }
 
     @Override
+    @TrackUserAction
     public List<Task> findAll() {
         return taskRepository.findAll();
     }
 
     @Override
+
     public List<Task> findAllByStatus(TaskStatus status) {
         return taskRepository.findAllByStatus(status);
     }
@@ -42,6 +46,7 @@ public class TaskService implements ITaskService {
     }
 
     @Override
+    @TrackUserAction
     public void deleteTask(Long id) {
         taskRepository.deleteById(id);
     }

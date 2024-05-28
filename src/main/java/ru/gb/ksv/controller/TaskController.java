@@ -7,7 +7,6 @@ import org.springframework.web.bind.annotation.*;
 import ru.gb.ksv.exception.TaskNotFoundException;
 import ru.gb.ksv.model.Task;
 import ru.gb.ksv.model.TaskStatus;
-import ru.gb.ksv.service.TaskService;
 import ru.gb.ksv.service.ITaskService;
 
 import java.util.List;
@@ -17,27 +16,36 @@ import java.util.List;
 @AllArgsConstructor
 public class TaskController {
     private ITaskService taskService;
+
     @PostMapping
-    public Task addTask(@RequestBody Task task){
+    public Task addTask(@RequestBody Task task) {
         return taskService.addTask(task);
     }
+
     @GetMapping
-    public List<Task> getAllTasks(){
+    public List<Task> getAllTasks() {
         return taskService.findAll();
     }
+
     @GetMapping("/status/{status}")
-    public List<Task> getTasksByStatus(@PathVariable TaskStatus status){
+    public List<Task> getTasksByStatus(@PathVariable TaskStatus status) {
         return taskService.findAllByStatus(status);
     }
+
     @PutMapping("/{id}")
-    public Task updateTaskStatus(@PathVariable Long id, @RequestBody Task task){
+    public Task updateTaskStatus(@PathVariable Long id, @RequestBody Task task) {
         return taskService.updateTaskStatus(id, task);
     }
-    @DeleteMapping("/{id}") public void deleteTask(@PathVariable Long id){
+
+    @DeleteMapping("/{id}")
+    public void deleteTask(@PathVariable Long id) {
         taskService.deleteTask(id);
     }
 
-
+    @GetMapping("/some-task")
+    public Task createSomeTask(){
+        return taskService.addTask(new Task( "description",TaskStatus.NOT_STARTED));
+    }
 
     @ExceptionHandler(TaskNotFoundException.class)
     public ResponseEntity<String> handleTaskNotFoundException(TaskNotFoundException ex) {

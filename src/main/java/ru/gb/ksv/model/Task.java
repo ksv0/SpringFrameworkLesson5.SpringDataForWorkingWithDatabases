@@ -3,11 +3,13 @@ package ru.gb.ksv.model;
 
 import jakarta.persistence.*;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import java.time.LocalDateTime;
 
 
 @Data
+@NoArgsConstructor
 @Entity
 @Table(name = "tasks")
 public class Task {
@@ -22,6 +24,12 @@ public class Task {
     @Column(nullable = false)
     @Temporal(TemporalType.TIMESTAMP)
     private LocalDateTime createdAt;
+
+    public Task( String description, TaskStatus taskStatus) {
+        this.description = description;
+        this.status = taskStatus;
+        this.createdAt = LocalDateTime.now();
+    }
 
     @PrePersist
     protected void onCreate() {
