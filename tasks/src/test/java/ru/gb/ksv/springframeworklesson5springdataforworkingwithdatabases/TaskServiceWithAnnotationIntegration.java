@@ -2,7 +2,6 @@ package ru.gb.ksv.springframeworklesson5springdataforworkingwithdatabases;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import org.mockito.Mock;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
@@ -45,7 +44,7 @@ class TaskServiceWithAnnotationIntegration {
 		task1 = new Task(
 				1L,
 				"Task 1",
-				TaskStatus.OPEN,
+				TaskStatus.NOT_STARTED,
 				LocalDateTime.now());
 		task2 = new Task(
 				2L,
@@ -78,11 +77,11 @@ class TaskServiceWithAnnotationIntegration {
 	@Test
 	public void findAllByStatus_shouldReturnTasksByStatus() {
 		List<Task> tasks = Arrays.asList(task1);
-		when(taskRepository.findAllByStatus(eq(TaskStatus.OPEN))).thenReturn(tasks);
+		when(taskRepository.findAllByStatus(eq(TaskStatus.NOT_STARTED))).thenReturn(tasks);
 
-		List<Task> openTasks = taskService.findAllByStatus(TaskStatus.OPEN);
+		List<Task> openTasks = taskService.findAllByStatus(TaskStatus.NOT_STARTED);
 
-		verify(taskRepository, times(1)).findAllByStatus(eq(TaskStatus.OPEN));
+		verify(taskRepository, times(1)).findAllByStatus(eq(TaskStatus.NOT_STARTED));
 		assertEquals(tasks, openTasks);
 	}
 

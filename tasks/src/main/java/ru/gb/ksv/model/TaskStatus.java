@@ -1,7 +1,7 @@
 package ru.gb.ksv.model;
 
 public enum TaskStatus {
-    OPEN,
+    NOT_STARTED,
     IN_PROGRESS,
     CLOSED
 }

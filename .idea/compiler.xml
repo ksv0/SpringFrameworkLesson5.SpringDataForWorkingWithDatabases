@@ -9,12 +9,14 @@
         <outputRelativeToContentRoot value="true" />
         <module name="SpringFrameworkLesson5SpringDataForWorkingWithDatabases" />
         <module name="eureka_server" />
-        <module name="APIGateway" />
         <module name="API_gateway" />
         <module name="SpringFrameworkLesson5SpringDataForWorkingWithDatabases (1)" />
         <module name="uploading_multipart_files" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="APIGateway" target="22" />
+    </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
