@@ -3,10 +3,12 @@ package ru.gb.ksv.aspect;
 
 import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.*;
+import org.springframework.stereotype.Component;
 
 import java.util.Arrays;
 
 @Aspect()
+@Component
 public class TrackUserAspect {
 
     @Pointcut("@annotation(ru.gb.ksv.aspect.annotation.TrackUserAction)")

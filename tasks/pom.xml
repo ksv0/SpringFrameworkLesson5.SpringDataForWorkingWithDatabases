@@ -11,7 +11,7 @@
 	<groupId>ru.gb.ksv</groupId>
 	<artifactId>SpringFrameworkLesson5SpringDataForWorkingWithDatabases</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>SpringFrameworkLesson5.SpringDataForWorkingWithDatabases</name>
+	<name>tasks</name>
 	<description>SpringFrameworkLesson5.SpringDataForWorkingWithDatabases</description>
 	<properties>
 		<java.version>22</java.version>
