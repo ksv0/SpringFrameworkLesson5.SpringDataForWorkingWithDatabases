@@ -14,7 +14,7 @@
 	<name>SpringFrameworkLesson5.SpringDataForWorkingWithDatabases</name>
 	<description>SpringFrameworkLesson5.SpringDataForWorkingWithDatabases</description>
 	<properties>
-		<java.version>22</java.version>
+		<java.version>17</java.version>
 		<spring-cloud.version>2023.0.1</spring-cloud.version>
 	</properties>
 	<dependencyManagement>

@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/SpringFrameworkLesson5SpringDataForWorkingWithDatabases.iml" filepath="$PROJECT_DIR$/SpringFrameworkLesson5SpringDataForWorkingWithDatabases.iml" />
+      <module fileurl="file://$PROJECT_DIR$/tasks/tasks.iml" filepath="$PROJECT_DIR$/tasks/tasks.iml" />
       <module fileurl="file://$PROJECT_DIR$/example_2/uploading_multipart_files.iml" filepath="$PROJECT_DIR$/example_2/uploading_multipart_files.iml" />
     </modules>
   </component>

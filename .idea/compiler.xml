@@ -10,7 +10,7 @@
         <module name="SpringFrameworkLesson5SpringDataForWorkingWithDatabases" />
         <module name="eureka_server" />
         <module name="API_gateway" />
-        <module name="SpringFrameworkLesson5SpringDataForWorkingWithDatabases (1)" />
+        <module name="tasks" />
         <module name="uploading_multipart_files" />
       </profile>
     </annotationProcessing>
@@ -23,8 +23,8 @@
       <module name="APIGateway" options="-parameters" />
       <module name="API_gateway" options="-parameters" />
       <module name="SpringFrameworkLesson5SpringDataForWorkingWithDatabases" options="-parameters" />
-      <module name="SpringFrameworkLesson5SpringDataForWorkingWithDatabases (1)" options="-parameters" />
       <module name="eureka_server" options="-parameters" />
+      <module name="tasks" options="-parameters" />
       <module name="uploading_multipart_files" options="-parameters" />
     </option>
   </component>
